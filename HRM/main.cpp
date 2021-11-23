@@ -1,14 +1,25 @@
-//
-//  main.cpp
-//  HRM
-//
-//  Created by 筱丁 on 2021/11/23.
-//
-
 #include <iostream>
+#include "Game.h"
+#include "Command.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+using namespace std;
+
+
+
+extern Space *Inbox;
+
+int main() {
+	// select level & load level
+
+	// load inbox
+	int a;
+	cin >> a;
+	for(int i = 0; i < 5; i++) {
+		Inbox = new Space(i);
+		delete Inbox;
+	}
+
+	Command *commands = new Command[a];
+	
+	// "input" instructions
 }
